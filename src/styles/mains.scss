@@ -2,6 +2,19 @@
 @use 'variables';
 @use 'hero';
 
+// Importing fonts
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
 // Reset
 * {
     margin: 0;
@@ -12,6 +25,7 @@
 
 body {
     background-color: variables.$surfaceColor;
+    font-family: Avenir, sans-serif;
 }
 
 // Text Styles
