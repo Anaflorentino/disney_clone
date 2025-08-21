@@ -1,5 +1,59 @@
-$bgColor: rgb(30, 255, 0);
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Globals
+$surfaceColor: #040714;
+$textColorPrimary: silver;
+$textColorSecondary: #f9f9f9;
 
 body {
-    background-color: $bgColor;
+    background-color: $surfaceColor;
 }
+
+// Text Styles
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $textColorPrimary;
+}
+
+.text--lg {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--sm {
+    @include text(12px);
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: $textColorSecondary;
+}
+
+.title--lg {
+    @include title(44px);
+}
+
+.title {
+    @include title;
+}
+
+.title--sm {
+    @include title(28px);
+}
+
+.link {
+    @include text(18px);
+    color: $textColorSecondary;
+    text-decoration: underline;
+}
+
